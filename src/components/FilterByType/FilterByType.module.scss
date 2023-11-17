@@ -1,0 +1,67 @@
+@import "../../styles/variables";
+
+.filter_by_type {
+  display: flex;
+  justify-content: center;
+  padding-bottom: 34px;
+
+  &_wrap {
+    max-width: 1088px;
+    width: 100%;
+    margin-left: 20px;
+    margin-right: 20px;
+    display: flex;
+  }
+
+  &_select {
+    position: relative;
+    display: block;
+    max-width: 400px;
+    width: 100%;
+    min-width: 180px;
+    border: 1px solid $black-brown-transparent;
+    border-radius: 40px;
+    background-color: $smoky-white;
+    z-index: 10;
+    box-shadow: 4px 4px 16px 0px $dark-blue-highly-transparent;
+
+    select {
+      border: none;
+      outline: none;
+      background: transparent;
+      -webkit-appearance: none;
+      -moz-appearance: none;
+      appearance: none;
+      border-radius: 0;
+      margin: 0;
+      display: block;
+      width: 100%;
+      padding: 12px 55px 15px 15px;
+      font-size: 14px;
+      color: $black-brown-transparent;
+      cursor: pointer;
+    }
+
+    &:after {
+      position: absolute;
+      right: 0;
+      top: 0;
+      width: 50px;
+      height: 100%;
+      line-height: 38px;
+      content: "\2228";
+      text-align: center;
+      color: $black-brown-transparent;
+      font-size: 24px;
+      border-left: 1px solid $black-brown-transparent;
+      z-index: -1;
+    }
+  }
+
+  .pokemon_loader {
+    width: 40px;
+    height: 40px;
+    margin-top: 2px;
+    margin-left: 10px;
+  }
+}

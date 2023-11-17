@@ -1,0 +1,149 @@
+@import "../../styles/variables";
+
+.pokemon_info {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  padding-top: 40px;
+  padding-bottom: 40px;
+
+  &_wrap {
+    max-width: 1560px;
+    width: 100%;
+    display: flex;
+
+    @media (max-width: 1000px) {
+      flex-direction: column;
+    }
+  }
+
+  &_img {
+    max-width: 520px;
+    width: 100%;
+    background-color: $light-turquoise;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+
+    @media (max-width: 1000px) {
+      max-width: 100%;
+    }
+
+    & > img {
+      @media (max-width: 1000px) {
+        max-width: 475px;
+        width: 100%;
+        height: auto;
+      }
+    }
+  }
+
+  &_properties {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    background-color: $rich-red-orange;
+    padding: 40px;
+
+    @media (max-width: 500px) {
+      padding-left: 20px;
+      padding-right: 20px;
+    }
+
+    .property {
+      &_name {
+        display: flex;
+
+        & > p {
+          text-transform: capitalize;
+        }
+      }
+
+      &_moves,
+      &_types {
+        display: flex;
+        flex-direction: column;
+
+        & > ul {
+          width: 100%;
+          display: flex;
+          flex-wrap: wrap;
+          list-style: none;
+
+          & > li {
+            &:not(:last-child):after {
+              content: ", ";
+              margin-right: 10px;
+            }
+          }
+        }
+      }
+
+      &_name,
+      &_moves,
+      &_types {
+        font-size: 18px;
+        padding-bottom: 20px;
+        line-height: 1.2;
+
+        & > span {
+          font-weight: 700;
+          margin-right: 8px;
+        }
+      }
+
+      &_types {
+        & > ul {
+          padding-top: 10px;
+
+          & > li {
+            &:not(:last-child):after {
+              content: "";
+            }
+
+            .type_btn {
+              border-radius: 10px;
+              border: none;
+              background: $bright-turquoise;
+              box-shadow: 0px -2px 0px 0px $black-very-transparent inset;
+              color: $black-brown;
+              text-align: center;
+              font-size: 16px;
+              font-weight: 400;
+              text-transform: capitalize;
+              padding: 6px 12px;
+              cursor: pointer;
+
+              &:hover {
+                opacity: 0.8;
+              }
+            }
+          }
+        }
+      }
+    }
+
+    .back_btn {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 160px;
+      height: 50px;
+      border-radius: 10px;
+      background: $pastel-green;
+      color: $black-brown;
+      text-align: center;
+      font-size: 23px;
+      font-style: normal;
+      font-weight: 700;
+      line-height: normal;
+      transition: opacity 0.3s ease-in-out;
+
+      &:hover {
+        opacity: 0.8;
+      }
+    }
+  }
+}

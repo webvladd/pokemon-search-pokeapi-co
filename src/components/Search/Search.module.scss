@@ -1,0 +1,76 @@
+@import "../../styles/variables";
+
+.search {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 34px;
+  padding-bottom: 34px;
+
+  &_wrap {
+    max-width: 1088px;
+    width: 100%;
+    margin-left: 20px;
+    margin-right: 20px;
+    position: relative;
+  }
+
+  .pokemon_loader {
+    width: 40px;
+    height: 40px;
+    position: absolute;
+    right: 16px;
+    top: calc((54px - 40px) / 2);
+  }
+
+  &_input {
+    width: 100%;
+    height: 54px;
+    border: none;
+    border-radius: 40px;
+    background: $smoky-white;
+    box-shadow: 4px 4px 16px 0px $dark-blue-highly-transparent;
+    padding-left: 30px;
+    padding-right: 30px;
+    color: $black-brown-transparent;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+  }
+
+  .negative_msg,
+  .success_msg {
+    display: flex;
+    border-radius: 12px;
+    padding: 8px 16px;
+    margin-top: 10px;
+    font-size: 18px;
+
+    & > p {
+      margin-right: 4px;
+      font-weight: 600;
+    }
+  }
+
+  .negative_msg {
+    border: 1px solid $light-pink;
+    background-color: $snow-white;
+    color: $sangina;
+  }
+
+  .success_msg {
+    color: $pine-green;
+    border: 1px solid $magic-mint;
+    background-color: $green-tea;
+
+    & > a {
+      text-transform: capitalize;
+
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+}
