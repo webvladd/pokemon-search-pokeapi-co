@@ -1,6 +1,6 @@
 Pet project for searching Pokémon using the API https://pokeapi.co/.
 
-Demo:
+Demo: https://dainty-custard-a2e796.netlify.app/
 
 The project is built using NODE version - 18.17.0, NPM - 9.6.7.
 
